@@ -1,0 +1,11 @@
+if: branch = master
+language: php
+php:
+  - 7.0
+script: echo "fake test"
+after_success:
+  - ./script.sh
+notifications:
+  email:
+    on_success: never
+    on_failure: never
