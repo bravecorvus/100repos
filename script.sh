@@ -20,5 +20,5 @@ then
   echo $EMAILAUTHPASS
   json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'"}'
   echo $json
-  curl -X POST -H "Content-Type: application/json" -d $json "https://0b43ae59.ngrok.io/platform/39"
+  curl -X POST -H "Content-Type: application/json" -d $json "https://cf18c9c7.ngrok.io/platform/39"
 fi
