@@ -1,8 +1,8 @@
 #!/bin/bash
 
-git checkout master
 # Just the git commit message title
-title=$(git reflog -1 | sed 's/^.*: //')
+title=$(git log -1 --pretty=%B | head -n 1)
+git checkout master
 # Save the messages into an array called message
 IFS=$'\n' message=($(git log -1 --pretty=%B | sed -e '1,2d'))
 
