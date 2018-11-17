@@ -14,11 +14,6 @@ then
     formattedmessages=$formattedmessages'|'$i
   done
 
-  echo $formattedmessages
-
-  echo "EMAILAUTHPASS"
-  echo $EMAILAUTHPASS
   json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'"}'
-  echo $json
   curl -X POST -H "Content-Type: application/json" -d $json "https://cf18c9c7.ngrok.io/platform/39"
 fi
