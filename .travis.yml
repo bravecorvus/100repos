@@ -2,9 +2,11 @@ if: branch = master
 language: php
 php:
   - 7.0
+before_script:
+  - echo "1.0.0" > ~/platformVersion
 script: echo "skip test"
 after_success:
-  - ./email.sh
+  - ./update.sh
 notifications:
   email:
     on_success: never
