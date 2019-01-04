@@ -15,5 +15,5 @@ then
   done
 
   json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'"}'
-  curl -X POST -H "Content-Type: application/json" -d $json "https://fd6a38de.ngrok.io/platform/39"
+  curl -X POST -H "Content-Type: application/json" -d $json "https://staging-api.voiceit.io/platform/39"
 fi
