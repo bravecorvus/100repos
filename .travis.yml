@@ -2,9 +2,9 @@ if: branch = master
 language: php
 php:
   - 7.0
-script: echo "fake test"
+script: echo "skip test"
 after_success:
-  - ./script.sh
+  - ./email.sh
 notifications:
   email:
     on_success: never

@@ -6,17 +6,6 @@ git checkout master
 # Save the messages into an array called message
 IFS=$'\n' message=($(git log -1 --pretty=%B | sed -e '1,2d'))
 
-echo "which sed"
-which sed
-echo "which curl"
-which curl
-
-echo $title
-for i in "${message[@]}"
-do
-  echo $i
-done
-
 if [[ $title = *"SENDEMAIL"* ]];
 then
   formattedmessages=''
@@ -26,5 +15,5 @@ then
   done
 
   json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'"}'
-  curl -X POST -H "Content-Type: application/json" -d $json "https://cf18c9c7.ngrok.io/platform/39"
+  curl -X POST -H "Content-Type: application/json" -d $json "https://a7294ba5.ngrok.io/platform/39"
 fi
