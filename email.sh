@@ -14,6 +14,6 @@ then
     formattedmessages=$formattedmessages'|'$i
   done
 
-  json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'", "packageManaged": false, "instructions": "https://github.com/voiceittech/VoiceIt2-Cpp/releases/download/2.0.0/VoiceIt2.hpp"}'
+  json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'", "packageManaged": false, "instructions": "go get github.com/voiceittech/VoiceIt2-Go@2.0.0"}'
   curl -X POST -H "Content-Type: application/json" -d $json "https://77aac59b.ngrok.io/platform/39"
 fi
