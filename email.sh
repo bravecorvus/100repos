@@ -14,6 +14,6 @@ then
     formattedmessages=$formattedmessages'|'$i
   done
 
-  json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'", "packageManaged": "docs", "instructions": "https://api.voiceit.io/?java#introduction"}'
+  json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'", "packageManaged": "true", "instructions": "npm update</code></div><br /><p class=\"p1\"><span class=\"s1\">inside your project.</span></p>"}'
   curl -X POST -H "Content-Type: application/json" -d $json "https://e6eb4e8e.ngrok.io/platform/39"
 fi
