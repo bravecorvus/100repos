@@ -14,6 +14,6 @@ then
     formattedmessages=$formattedmessages'|'$i
   done
 
-  json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'", "packageManaged": "true", "instructions": "go get github.com/voiceittech/VoiceIt2-Go@2.0.0</code></div><br /><p class="p1"><span class="s1">(or if using Go version < 1.11 and or a <code>GOPATH</code> based installation of our library, run the command: )<span></p> <br /><div style=\"width: 80%; margin: auto; text-align: center;\"><code>go get -u github.com/voiceittech/VoiceIt2-Go</code></div><br />"}'
+  json='{"authenticationPassword":"'$EMAILAUTHPASS'", "messages" : "'$formattedmessages'", "packageManaged": "true", "instructions": "go get github.com/voiceittech/VoiceIt2-Go@2.0.0</code></div><br /><p class="p1"><span class="s1">(or if using Go version < 1.11 and/or a <code>GOPATH</code> based installation of our library, run the command: )<span></p><br /><div style="width: 80%; margin: auto; text-align: center;"><code>go get -u github.com/voiceittech/VoiceIt2-Go</code></div><br />"}'
   curl -X POST -H "Content-Type: application/json" -d $json "https://api.voiceit.io/platform/3"
 fi
